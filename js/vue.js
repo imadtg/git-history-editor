@@ -120,9 +120,10 @@ var v = new Vue({
                     + "'" + result.msg + 'else cat' + br + "fi' ";
             }
 
-            if (!result.bulk && result.oldest) {
+            /*if (!result.bulk && result.oldest) {
                 script += result.oldest.substr(0, 7) + '^..HEAD' +  ' ';
-            }
+            }*/
+           script += "-- --all ";
 
             script += '&& rm -fr "$(git rev-parse --git-dir)/refs/original/"' + br;
 
